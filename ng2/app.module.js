@@ -11,6 +11,7 @@ var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./components/app/app.component");
 var next_component_1 = require("./components/nextComponent/next.component");
+var third_component_1 = require("./components/thirdComponent/third.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -24,7 +25,8 @@ var AppModule = /** @class */ (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                next_component_1.NextComponent
+                next_component_1.NextComponent,
+                third_component_1.ThirdComponent
             ],
             exports: [],
             providers: [],

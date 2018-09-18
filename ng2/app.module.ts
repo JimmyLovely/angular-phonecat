@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './components/app/app.component';
 import { NextComponent } from './components/nextComponent/next.component';
-
+import { ThirdComponent } from './components/thirdComponent/third.component';
 import { AppRoutingModule } from './app.routing';
 
 
@@ -17,7 +17,8 @@ import { AppRoutingModule } from './app.routing';
     ],
     declarations: [
         AppComponent,
-        NextComponent
+        NextComponent,
+        ThirdComponent
     ],
     exports: [],
     providers: [],

@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var app_component_1 = require("./components/app/app.component");
 var next_component_1 = require("./components/nextComponent/next.component");
+var third_component_1 = require("./components/thirdComponent/third.component");
 var routes = [
     {
-        path: 'next',
+        path: 'ng2/next',
         component: next_component_1.NextComponent
     }, {
-        path: 'app',
-        component: app_component_1.AppComponent
+        path: 'ng2/third',
+        component: third_component_1.ThirdComponent
     }
 ];
 var AppRoutingModule = /** @class */ (function () {

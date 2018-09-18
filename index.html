@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Upgrade to Angular2</title>
+    <link rel="stylesheet" href="ng1/bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <script src="ng1/bower_components/jquery/dist/jquery.js"></script>
+    <script src="ng1/bower_components/angular/angular.js"></script>
+    <script src="ng1/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="ng1/bower_components/angular-route/angular-route.js"></script>
+
+    <!-- ng1 -->
+    <script src="ng1/app.js"></script>
+    <script src="ng1/app.module.js"></script>
+    <script src="ng1/app.route.js"></script>
+    <script src="ng1/core/phone/phone.service.js"></script>
+    <script src="ng1/phone-list/phone-list.component.js"></script>
+    <script src="ng1/phone-detail/phone-detail.component.js"></script>
+
+    <!-- ng2 -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app');
+    </script>
+
+  </head>
+  <body>
+    <!-- ng1 -->
+    <ng-view> </ng-view>
+
+    <!-- ng2 -->
+    <ng2-app></ng2-app>
+  </body>
+</html>
