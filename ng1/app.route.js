@@ -12,9 +12,6 @@ angular.
         }).
         when('/ng1/phones/:phoneId', {
           template: '<phone-detail></phone-detail>'
-        }).
-        when('/', {
-          template: '<phone-list></phone-list>'
         })
     }
   ]);

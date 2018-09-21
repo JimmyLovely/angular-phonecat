@@ -1,9 +1,14 @@
 <div>
-    This is ng2
+    <a [routerLink]="[ '/ng2/next' ]">Ng2 -> Next</a>
     <br>
-    <a [routerLink]="['/ng2/next']">Ng2 -> Next</a>
+    <a [routerLink]="[ '/ng2/third' ]">Ng2 -> Third</a>
     <br>
-    <a [routerLink]="['/ng2/third']">Ng2 -> third</a>
+    <a [routerLink]="[ '/ng1/phones' ]">Ng1 -> phones</a>
     <br>
-    <router-outlet></router-outlet>
+    <a [routerLink]="[ '/ng1/phones/1' ]">Ng1 -> phones -> id</a>
+    <br>
+    <div style="border: 2px solid red;">
+        <router-outlet></router-outlet>
+        <div ng-view></div>
+    </div>
 </div>

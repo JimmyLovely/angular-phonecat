@@ -9,6 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
+var static_1 = require("@angular/upgrade/static");
+var HybridUrlHandlingStrategy = /** @class */ (function () {
+    function HybridUrlHandlingStrategy() {
+    }
+    // use only process the `/ng2` url
+    HybridUrlHandlingStrategy.prototype.shouldProcessUrl = function (url) { return url.toString().startsWith('/ng2'); };
+    HybridUrlHandlingStrategy.prototype.extract = function (url) { return url; };
+    HybridUrlHandlingStrategy.prototype.merge = function (url, whole) { return url; };
+    return HybridUrlHandlingStrategy;
+}());
 var app_component_1 = require("./components/app/app.component");
 var next_component_1 = require("./components/nextComponent/next.component");
 var third_component_1 = require("./components/thirdComponent/third.component");
@@ -16,11 +27,14 @@ var app_routing_1 = require("./app.routing");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule.prototype.ngDoBootstrap = function () {
+    };
     AppModule = __decorate([
         core_1.NgModule({
             imports: [
                 forms_1.FormsModule,
                 platform_browser_1.BrowserModule,
+                static_1.UpgradeModule,
                 app_routing_1.AppRoutingModule
             ],
             declarations: [
@@ -29,7 +43,10 @@ var AppModule = /** @class */ (function () {
                 third_component_1.ThirdComponent
             ],
             exports: [],
-            providers: [],
+            providers: [
+                // use custom url handling strategy
+                { provide: router_1.UrlHandlingStrategy, useClass: HybridUrlHandlingStrategy }
+            ],
             bootstrap: [
                 app_component_1.AppComponent
             ]
