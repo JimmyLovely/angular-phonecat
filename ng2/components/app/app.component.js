@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var static_1 = require("@angular/upgrade/static");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
@@ -23,3 +24,4 @@ var AppComponent = /** @class */ (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+angular.module('phonecatApp').directive('ng2App', static_1.downgradeComponent({ component: AppComponent }));
