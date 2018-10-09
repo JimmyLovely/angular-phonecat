@@ -9,20 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
-var router_1 = require("@angular/router");
 var static_1 = require("@angular/upgrade/static");
-var HybridUrlHandlingStrategy = /** @class */ (function () {
-    function HybridUrlHandlingStrategy() {
-    }
-    // use only process the `/ng2` url
-    HybridUrlHandlingStrategy.prototype.shouldProcessUrl = function (url) { return url.toString().startsWith('/ng2'); };
-    HybridUrlHandlingStrategy.prototype.extract = function (url) { return url; };
-    HybridUrlHandlingStrategy.prototype.merge = function (url, whole) { return url; };
-    return HybridUrlHandlingStrategy;
-}());
 var app_component_1 = require("./components/app/app.component");
-var next_component_1 = require("./components/nextComponent/next.component");
-var third_component_1 = require("./components/thirdComponent/third.component");
+var next_component_1 = require("./components/next/next.component");
+var third_component_1 = require("./components/third/third.component");
+var empty_component_1 = require("./components/empty/empty.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -40,13 +31,11 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 next_component_1.NextComponent,
-                third_component_1.ThirdComponent
+                third_component_1.ThirdComponent,
+                empty_component_1.EmptyComponent
             ],
             exports: [],
-            providers: [
-                // use custom url handling strategy
-                { provide: router_1.UrlHandlingStrategy, useClass: HybridUrlHandlingStrategy }
-            ],
+            providers: [],
             bootstrap: [
                 app_component_1.AppComponent
             ]

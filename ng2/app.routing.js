@@ -8,13 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var next_component_1 = require("./components/nextComponent/next.component");
-var third_component_1 = require("./components/thirdComponent/third.component");
+var next_component_1 = require("./components/next/next.component");
+var third_component_1 = require("./components/third/third.component");
+var empty_component_1 = require("./components/empty/empty.component");
 var routes = [{
-        path: 'ng2', children: [
-            { path: 'next', component: next_component_1.NextComponent },
-            { path: 'third', component: third_component_1.ThirdComponent },
-        ]
+        path: '',
+        pathMatch: 'full',
+        component: next_component_1.NextComponent
+    }, {
+        path: 'ng2/next',
+        component: next_component_1.NextComponent
+    }, {
+        path: 'ng2/third',
+        component: third_component_1.ThirdComponent
+    }, {
+        path: '**',
+        component: empty_component_1.EmptyComponent
     }];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

@@ -14,7 +14,7 @@
         "@angular/platform-browser": "~4.3.4",
         "@angular/platform-browser-dynamic": "~4.3.4",
         "@angular/router": "~4.3.4",
-        "@angular/upgrade": "^6.1.7",
+        "@angular/upgrade": "4.3.6",
         "@types/angular": "^1.6.50",
         "@types/angular-animate": "^1.5.10",
         "@types/angular-cookies": "^1.4.5",

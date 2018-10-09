@@ -16,7 +16,7 @@ var ThirdComponent = /** @class */ (function () {
     ThirdComponent = __decorate([
         core_1.Component({
             selector: 'ng2-third',
-            templateUrl: '/ng2/components/thirdComponent/third.component.html'
+            templateUrl: '/ng2/components/third/third.component.html'
         }),
         __metadata("design:paramtypes", [])
     ], ThirdComponent);
